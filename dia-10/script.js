@@ -1,10 +1,10 @@
 // criando um array de nomes, no js não precisa definir o tamanho do array
 
-let nomes = ['Giovanni', 'Eric', 'Lucas'];
+let nome = ['Giovanni', 'Eric', 'Lucas'];
 
-nomes[0]; // solicitando índice 0 do array
+nome[0]; // solicitando índice 0 do array
 
-nomes[3] = 'Bruno'; // definindo novo valor na posição 3 do array
+nome[3] = 'Bruno'; // definindo novo valor na posição 3 do array
 
 // também é possível criar um array vazio
 
@@ -26,3 +26,19 @@ vazio[1] = 1; // repare que inseri um valor do tipo number na posição 1 do arr
 
 // o recomendado é armazenar sempre o mesmo tipo de valor no array e sem espaços vazios
 
+let nomes = [];
+let continuar = true;
+let contador = 0;
+
+while (continuar) 
+{
+    let nomeInserido = prompt('Insira um nome: ');
+    nomes[contador] = nomeInserido;
+    let desejaContinuar = prompt('[S/N]');
+    if (desejaContinuar === 'N')
+    {
+        continuar = false;
+        continue; //vai verificar a condição do while
+    }
+    contador ++;
+}
