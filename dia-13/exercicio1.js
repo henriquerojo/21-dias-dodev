@@ -43,5 +43,5 @@ class Computador
     {
         console.log('Tipo: ' + this.tipo + '\nProcessador: ' + this.processador + '\nVideo: ' + this.video + '\nArmazenamento: ' + this.armazenamento + '\nMemória RAM: ' + this.memoriaram + '\nSSD: ' + this.ssd);
     }
-}
+} 
 
