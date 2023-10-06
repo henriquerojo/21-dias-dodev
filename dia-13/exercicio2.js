@@ -41,3 +41,51 @@ propriedade “Vencedor”.
 
 7 - Chame o método para verificar quem fez o menor tempo e por fim o método que exibe o vencedor.
 */
+class Carro
+{
+  //propriedades
+  nome;
+  potencia;
+  velocidadeMaxima;
+  aceleracao;
+  // metodos construtores
+  constructor(nome, potencia, velocidadeMaxima, aceleracao)
+  {
+    this.nome = nome;
+    this.potencia = potencia;
+    this.velocidadeMaxima = velocidadeMaxima;
+    this.aceleracao = aceleracao;
+  }
+  // metodos da classe
+  calcularTempo(distancia)
+  {
+    resultado = distancia / (this.velocidadeMaxima / this.aceleracao)
+    return resultado;
+  }
+}
+
+class Corrida
+{
+  // propriedades
+  nome;
+  tipo;
+  distancia;
+  participantes;
+  vencedor;
+  // metodos construtores
+  constructor(nome, tipo, distancia, participantes, vencedor)
+  {
+    this.nome = nome;
+    this.tipo = tipo;
+    this.distancia = distancia;
+    this.participantes = participantes;
+    this.vencedor = vencedor;
+  }
+  // metodos da classe
+  corridaMenorTempo()
+  {
+    let calcularTempo = calcularTempo(this.distancia);
+    this.vencedor = Carro.nome;
+  }
+}
+
