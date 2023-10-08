@@ -73,19 +73,40 @@ class Corrida
   participantes;
   vencedor;
   // metodos construtores
-  constructor(nome, tipo, distancia, participantes, vencedor)
+  constructor(nome, tipo, distancia)
   {
     this.nome = nome;
     this.tipo = tipo;
     this.distancia = distancia;
-    this.participantes = participantes;
-    this.vencedor = vencedor;
   }
   // metodos da classe
   corridaMenorTempo()
   {
-    let calcularTempo = calcularTempo(this.distancia);
-    this.vencedor = Carro.nome;
+    let menorTempo = this.participantes[0].calcularTempo(this.distancia);
+    this.vencedor = this.participantes[0];
+    for (let c = 1; c < this.participantes.length; c++) 
+    {
+        let tempo = this.participantes[c].calcularTempo(this.distancia)
+        if (tempo < menorTempo)
+        {
+          menorTempo = tempo;
+          vencedor = this.participantes[c];
+        }
+        return this.vencedor = vencedor;
+    }
+  }
+
+  exibirVencedor()
+  {
+    alert('O vencedor é ' + this.vencedor.nome)
   }
 }
 
+let corrida = new Corrida('Monza', 'Fórmula 1', 60000);
+
+corrida.participantes[0] = new Carro('Onix', 120, 150, 5);
+corrida.participantes[1] = new Carro('Celta', 100, 140, 4);
+corrida.participantes[2] = new Carro('Uno', 110, 160, 6);
+
+corrida.corridaMenorTempo();
+corrida.exibirVencedor();
