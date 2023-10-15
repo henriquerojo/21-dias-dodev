@@ -110,3 +110,4 @@ corrida.participantes[2] = new Carro('Uno', 110, 160, 6);
 
 corrida.corridaMenorTempo();
 corrida.exibirVencedor();
+
